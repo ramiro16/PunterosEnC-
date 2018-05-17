@@ -3,6 +3,7 @@
 
 void intercambiar(int num1,int num2); //NO FUNCIONA
 void intercambiarConPunteros(int *num1, int *num2);
+void ponerEnCero(int *num1);
 int main()
 {
     int edadUno;
@@ -10,6 +11,7 @@ int main()
     edadUno = 22;
     edadDos = 99;
 
+    ponerEnCero(&edadDos);
     //intercambiar(edadUno,edadDos); //NO FUNCIONA
     intercambiarConPunteros(&edadUno,&edadDos);
 
@@ -28,7 +30,6 @@ void intercambiar(int num1,int num2)
     num2 = aux;
 }
 
-
 void intercambiarConPunteros(int *num1,int *num2)
 {
     int aux;
@@ -38,5 +39,8 @@ void intercambiarConPunteros(int *num1,int *num2)
     *num2 = aux;
 }
 
-
+void ponerEnCero(int *num1)
+{
+    *num1 = 0;
+}
 
